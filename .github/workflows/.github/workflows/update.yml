@@ -2,12 +2,12 @@ name: Update IPTV Link
 
 on:
   schedule:
-    - cron: '0 * * * *' # এটি প্রতি ১ ঘণ্টা পর পর অটোমেটিক চলবে
-  workflow_dispatch: # চাইলে আপনি নিজেও ম্যানুয়ালি রান করতে পারবেন
+    - cron: '0 * * * *' # প্রতি ১ ঘণ্টা পর পর অটোমেটিক চলবে
+  workflow_dispatch: # ম্যানুয়ালি রান করার অপশন
 
 jobs:
   update-link:
-    runs-edge: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
